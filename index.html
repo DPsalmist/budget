@@ -241,7 +241,7 @@
             <!-- Product Item Start -->
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="product-item shadow bg-info" style="border-radius: 10px; overflow: hidden;">
-                    <img class="img-fluid w-100" style="height: 250px; object-fit: cover;" src="img/productdemo.png" alt="Product 1" onclick="showImageModal('img/productdemo.jpng')">
+                    <img class="img-fluid w-100" style="height: 250px; object-fit: cover;" src="img/productdemo.png" alt="Product 1" onclick="showImageModal('img/productdemo.png')">
                     <div class="p-4 text-center">
                         <h4 class="mb-3">Premium White Emulsion</h4>
                         <p>High-quality emulsion paint for a smooth finish.</p>
@@ -457,7 +457,7 @@
     <!-- WhatsApp -->
     <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
         <script>
-          var wa_btnSetting = {"btnColor":"#14b4db","ctaText":"Chat Us Now","cornerRadius":40,"marginBottom":150,"marginLeft":20,"marginRight":20,"btnPosition":"right","whatsAppNumber":"2348137473177","welcomeMessage":"Welcome to Budget paints! Please drop your message. We'll respond in 15 mins or less. Thanks ","zIndex":999999,"btnColorScheme":"dark"};
+          var wa_btnSetting = {"btnColor":"#14b4db","ctaText":"Chat Us Now","cornerRadius":40,"marginBottom":120,"marginLeft":20,"marginRight":20,"btnPosition":"right","whatsAppNumber":"2348137473177","welcomeMessage":"Welcome to Budget paints! Please drop your message. We'll respond in 15 mins or less. Thanks ","zIndex":999999,"btnColorScheme":"dark"};
           window.onload = () => {
             _waEmbed(wa_btnSetting);
           };
@@ -547,8 +547,8 @@
     <!-- Products script -->
     <script>
         function showImageModal(src) {
-            document.getElementById("imageModal").style.display = "block";
-            document.getElementById("modalImage").src = src;
+        document.getElementById("modalImage").src = src;
+        document.getElementById("imageModal").style.display = "block";
         }
         function closeImageModal() {
             document.getElementById("imageModal").style.display = "none";
