@@ -133,7 +133,7 @@
                             <div><i class="fa fa-2x fa-paint-brush"></i></div>
                         </div>
                         <h3 class="mt-5">Regular Painting</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -141,8 +141,8 @@
                         <div class="service-icon p-3">
                             <div><i class="fa fa-2x fa-paint-roller"></i></div>
                         </div>
-                        <h3 class="mt-5">Wall Painting</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <h3 class="mt-5">Interior Decoration</h3>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -150,8 +150,8 @@
                         <div class="service-icon p-3">
                             <div><i class="fa fa-2x fa-brush"></i></div>
                         </div>
-                        <h3 class="mt-5">Floor Coating</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <h3 class="mt-5">POP Ceiling</h3>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -159,8 +159,8 @@
                         <div class="service-icon p-3">
                             <div><i class="fa fa-2x fa-eraser"></i></div>
                         </div>
-                        <h3 class="mt-5">Graffiti Removal</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <h3 class="mt-5">3D Panel</h3>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -169,7 +169,7 @@
                             <div><i class="fa fa-2x fa-spray-can"></i></div>
                         </div>
                         <h3 class="mt-5">Mildew Removal</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 pt-5">
@@ -177,8 +177,8 @@
                         <div class="service-icon p-3">
                             <div><i class="fa fa-2x fa-city"></i></div>
                         </div>
-                        <h3 class="mt-5">Window Washing</h3>
-                        <a class="btn shadow-none text-dark" href="">View Detail<i class="bi bi-arrow-right ms-1"></i></a>
+                        <h3 class="mt-5">Wall Paper</h3>
+                        <a class="btn shadow-none text-dark" href="">Checked<i class="fa fa-paint-roller ms-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -188,34 +188,41 @@
 
 
     <!-- Portfolio Section -->
-<div class="container py-5">
+    <div class="container py-5">
     <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-        <h2 class="display-5">Our Portfolio</h2>
+        <h2 class="display-5">Recent Portfolio</h2>
         <hr class="w-25 mx-auto text-dark" style="opacity: 1;">
     </div>
     <div class="row g-4">
         <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow">
-                <img src="img/portfolio1.jpg" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 1">
+            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
+                <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 1">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow">
-                <img src="img/portfolio2.jpg" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 2">
+            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
+                <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 2">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow">
-                <img src="img/portfolio3.jpg" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 3">
+            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
+                <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 3">
             </div>
         </div>
         <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow">
-                <img src="img/portfolio4.jpg" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 4">
+            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
+                <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 4">
             </div>
         </div>
     </div>
 </div>
+
+<!-- Portfolio Modal -->
+<div id="portfolioModal" class="modal">
+    <span class="close" onclick="closePortfolioModal()">&times;</span>
+    <img class="modal-content" id="modalPortfolioImage">
+</div>
+
 
 
 
@@ -386,8 +393,19 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Portfolio Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+    function showPortfolioModal(src) {
+        document.getElementById("modalPortfolioImage").src = src;
+        document.getElementById("portfolioModal").style.display = "flex";
+    }
+    function closePortfolioModal() {
+        document.getElementById("portfolioModal").style.display = "none";
+    }
+</script>
+
 </body>
 
 </html>
