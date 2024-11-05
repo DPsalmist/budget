@@ -350,48 +350,48 @@
     }
 
     /* Responsive modal image styling */
-#imageModal {
-    display: none;
-    position: fixed;
-    z-index: 1000; /* Higher z-index to ensure it’s above other content */
-    left: 10%;
-    top: 10%;
-    width: 80%;
-    height: 80%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-}
+    #imageModal {
+        display: none;
+        position: fixed;
+        z-index: 1000; /* Higher z-index to ensure it’s above other content */
+        left: 10%;
+        top: 10%;
+        width: 80%;
+        height: 80%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+    }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+    }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px; /* Adds padding for easier clicking */
-    z-index: 1001; /* Ensure it's above the modal content */
-}
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px; /* Adds padding for easier clicking */
+        z-index: 1001; /* Ensure it's above the modal content */
+    }
 
-/* Modal styling to center content */
-.modal {
-    display: flex;
-    position: relative;
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+    /* Modal styling to center content */
+    .modal {
+        display: flex;
+        position: relative;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 
 
     /* Breadcrumbs */
@@ -424,34 +424,84 @@
 }
 
 
-/* Portfolio */
-/* Portfolio modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 80%;
-    height: 80%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    height: auto;
-}
-.close {
+    /* Portfolio modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000; /* Higher z-index to ensure it’s above other content */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Ensure no overflow */
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Modal content */
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+        max-height: 80%;
+        border-radius: 10px;
+    }
+
+    /* Close button styling */
+    .close {
+        position: absolute;
+        top: 60px; /* Adjusted for better visibility */
+        right: 30px; /* Adjusted for better visibility */
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px; /* Adds padding for easier clicking */
+        z-index: 1001; /* Ensure it's above the modal content */
+    }
+
+    /* Portfolio Arrows */
+    .arrow {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        color: #fff;
+        font-size: 40px;
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+        padding: 10px; /* Adds padding for easier clicking */
+        z-index: 1001; /* Ensure it's above the modal content */
+    }
+
+    .arrow.left {
+        left: 20px; /* Position on the left */
+        transform: translateY(-50%); /* Center vertically */
+    }
+
+    .arrow.right {
+        right: 20px; /* Position on the right */
+        transform: translateY(-50%); /* Center vertically */
+    }
+
+    /* Product Arrows   */
+    .arrow {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 50%;
     color: #fff;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 40px;
     cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    padding: 10px; /* Adds padding for easier clicking */
+    z-index: 1001; /* Ensure it's above the modal content */
+}
+
+.arrow.left {
+    left: 20px; /* Position on the left */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.arrow.right {
+    right: 20px; /* Position on the right */
+    transform: translateY(-50%); /* Center vertically */
 }
 

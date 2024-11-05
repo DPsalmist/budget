@@ -189,39 +189,42 @@
 
     <!-- Portfolio Section -->
     <div class="container py-5">
-    <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-        <h2 class="display-5">Recent Portfolio</h2>
-        <hr class="w-25 mx-auto text-dark" style="opacity: 1;">
+        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+            <h2 class="display-5">Recent Portfolio</h2>
+            <hr class="w-25 mx-auto text-dark" style="opacity: 1;">
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
+                    <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 1">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
+                    <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 2">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
+                    <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 3">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
+                    <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 4">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row g-4">
-        <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
-                <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 1">
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house1.png')">
-                <img style="height: 250px; object-fit: cover;" src="img/house1.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 2">
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
-                <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 3">
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="portfolio-item shadow" onclick="showPortfolioModal('img/house2.png')">
-                <img style="height: 250px; object-fit: cover;" src="img/house2.png" class="img-fluid w-100 portfolio-img" alt="Portfolio Image 4">
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Portfolio Modal -->
-<div id="portfolioModal" class="modal">
-    <span class="close" onclick="closePortfolioModal()">&times;</span>
-    <img class="modal-content" id="modalPortfolioImage">
-</div>
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal">
+        <span class="close" onclick="closePortfolioModal()">&times;</span>
+        <img class="modal-content" id="modalPortfolioImage">
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
 
 
 
@@ -404,6 +407,7 @@
     function closePortfolioModal() {
         document.getElementById("portfolioModal").style.display = "none";
     }
+
 </script>
 
 </body>
