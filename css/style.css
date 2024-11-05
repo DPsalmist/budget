@@ -1,0 +1,421 @@
+/********** Template CSS **********/
+:root {
+    --primary: skyblue;
+/*    --secondary: #8CC641;*/
+    --secondary: black;
+    --light: #F2F2F2;
+/*    --dark: #272630;*/
+    --dark: black;
+}
+
+.btn {
+    font-weight: 700;
+    transition: .5s;
+}
+
+.btn:hover {
+   -webkit-box-shadow: 0 8px 6px -6px skyblue;
+    -moz-box-shadow: 0 8px 6px -6px skyblue;
+    box-shadow: 0 8px 6px -6px skyblue;
+    background-color: skyblue;
+    color: white;
+}
+
+.btn.btn-secondary {
+    color: #FFFFFF;
+    background-color: skyblue;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    margin-left: 30px;
+    padding: 35px 0;
+    font-size: 18px;
+    color: var(--light);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (min-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        bottom: 0;
+        left: 50%;
+        background: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link  {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+.bg-hero {
+    background: url(../img/bgimg1.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 991.98px) {
+    .bg-hero {
+        background-size: cover;
+    }
+}
+
+.about-start,
+.about-end {
+    background: url(../img/aboutbg.jpg) center center no-repeat;
+    background-size: contain;
+}
+
+@media (min-width: 992px) {
+    .about-start {
+        position: relative;
+        margin-right: -90px;
+        z-index: 1;
+    }
+
+    .about-end {
+        position: relative;
+        margin-left: -90px;
+        z-index: 1;
+    }
+}
+
+.service-item,
+.contact-item {
+    background: url(../img/service4.jpeg) top center no-repeat;
+    background-size: cover;
+    transition: .5s;
+}
+
+.service-item:hover,
+.contact-item:hover {
+    background: url(../img/service1.jpg) bottom center no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+.service-item .service-icon,
+.contact-item .contact-icon {
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    color: var(--secondary);
+    background: #FFFFFF;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon div,
+.contact-item .contact-icon div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    transition: .5s;
+}
+
+.service-item .service-icon i,
+.contact-item .contact-icon i {
+    transform: rotate(45deg);
+    transition: .5s;
+}
+
+.service-item:hover .service-icon div,
+.contact-item:hover .contact-icon div {
+    background: var(--secondary);
+    color: black;
+}
+
+.service-item:hover .service-icon i,
+.contact-item:hover .contact-icon i {
+    color: var(--primary);
+}
+
+.service-item a.btn {
+    position: relative;
+    bottom: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: 0;
+    opacity: 1;
+}
+
+.bg-quote {
+    background: url(../img/quote3.jpeg) top right no-repeat;
+    background-size: contain ;
+}
+
+@media (max-width: 991.98px) {
+    .bg-quote {
+        background-size: cover;
+    }
+}
+
+.team-item {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.team-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/team.jpg) bottom center no-repeat;
+    background-size: cover;
+    height: 90px;
+    padding: 0 30px;
+    right: 45px;
+    left: 45px;
+    bottom: -45px;
+    transition: .5s;
+    z-index: 1;
+}
+
+.team-item:hover .team-text {
+    height: 100%;
+    bottom: 0;
+}
+
+.team-social {
+    position: absolute;
+    transition: .1s;
+    transition-delay: .0s;
+    opacity: 0;
+}
+
+.team-item:hover .team-social {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+.bg-testimonial {
+    background: url(../img/testi1.jpeg) top left no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+    .bg-testimonial {
+        background-size: cover;
+    }
+}
+
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: start;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--secondary);
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+/*    color: var(--dark);*/
+    color: black;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.bg-call-to-action {
+    background: url(../img/cta1.jpeg) top right no-repeat;
+    background-size: contain;
+}
+
+.bg-footer {
+    background: url(../img/footer.jpg) center center no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 991.98px) {
+    .bg-call-to-action,
+    .bg-footer {
+        background-size: cover;
+    }
+}
+
+/* Extras */
+
+.why-choose-us-list {
+        list-style: none;
+        padding: 0;
+        animation: fadeInUp 1s ease-out;
+    }
+    .why-choose-us-list li {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        opacity: 0;
+        animation: slideIn 1s ease forwards;
+        display: flex;
+        align-items: center;
+    }
+    .why-choose-us-list li i {
+        font-size: 1.5rem;
+        margin-right: 8px;
+    }
+    @keyframes slideIn {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+/* Products */
+
+    .product-item {
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    .price {
+        font-weight: bold;
+    }
+
+    .product-img {
+        height: 100px; /* Adjust as needed */
+        object-fit: cover;
+    }
+
+    /* Responsive modal image styling */
+    #imageModal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 80%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 80%;
+    }
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Modal styles */
+    .modal {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 80%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Breadcrumbs */
+    .bg-hero a {
+        color: #ddd;
+    }
+    .bg-hero a:hover {
+        color: #fff;
+    }
+    .fa-angle-right {
+        color: #ddd;
+    }
+
+    /*  Portfolio  */
+
+    .portfolio-img {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.8;
+    }
+    .portfolio-img:hover {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    /*  FAQs  */
+    .faq-section {
+    background-color: rgba(135, 206, 250, 0.15); /* Light sky blue with slight transparency */
+    border-radius: 10px;
+    padding: 20px;
+}
+
